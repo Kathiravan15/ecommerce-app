@@ -1,0 +1,97 @@
+/* Container for the header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Logo styles */
+.header__logo {
+  cursor: pointer;
+}
+
+.header__logo h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Navigation container */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Navigation links */
+.header__nav a {
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: 500;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.header__nav a:hover {
+  color: #fff;
+  background-color: #1a73e8;
+}
+
+/* Cart link with bold */
+.header__cart {
+  font-weight: bold;
+  border: 1px solid #1a73e8;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.header__cart:hover {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+
+  .header__nav {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  .header__nav a {
+    padding: 4px 6px;
+  }
+}
+.header__logo {
+  display: flex;
+  align-items: center; /* vertically center icon and text */
+  cursor: pointer;
+  gap: 8px; /* space between icon and text */
+}
+
+.header__logo-icon {
+  color: #1a73e8;
+  font-size: 28px;
+}
+
+.header__logo-text {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}

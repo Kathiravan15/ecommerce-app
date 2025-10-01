@@ -1,0 +1,118 @@
+/* Product Card Container */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for card */
+.product-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image */
+.product-card__image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-card__image:hover {
+  transform: scale(1.05);
+}
+
+/* Product Title */
+.product-card__title {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #222;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Product Description (dynamic multiline with ellipsis) */
+.product-card__desc {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #555;
+  flex-grow: 1;
+
+  /* text truncation with ellipsis */
+  overflow: hidden;
+  display: -webkit-box;
+
+  /* WebKit-specific */
+  -webkit-line-clamp: 3; /* max 3 lines */
+  -webkit-box-orient: vertical;
+
+  /* Standard property (modern browsers) */
+  line-clamp: 3;          /* requires display: box or block container */
+  box-orient: vertical;
+
+  /* fallback for non-supporting browsers */
+  display: block;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+
+/* Footer with price and button */
+.product-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* Price Styling */
+.product-card__price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+/* Add to Cart Button */
+.product-card__btn {
+  padding: 8px 14px;
+  cursor: pointer;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.product-card__btn:hover {
+  background-color: #0c4eb3;
+  transform: translateY(-2px);
+}
+
+.product-card__btn:active {
+  transform: translateY(0px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 45%;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    max-width: 100%;
+  }
+}
